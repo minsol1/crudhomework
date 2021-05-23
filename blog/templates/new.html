@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block contents %}
+    <h2>글작성</h2>
+    <form action="{% url 'create'%}" method="POST">
+        {% csrf_token %}
+        제목: <input type="text" name ="title">
+        작성자: <input type="text" name ="writer">
+        본문 : <textarea name="body" id="" cols="30" rows="10"></textarea>
+        <button type="submin">제출</button>
+    </form>
+{% endblock %}

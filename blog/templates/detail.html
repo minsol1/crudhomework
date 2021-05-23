@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block contents %}
+    <h1>{{blog.title}}</h1>
+    {{blog.pub_date}}
+    <br>
+    {{blog.writer}}
+    <br>
+    {{blog.body}}
+    <a href="{% url 'edit' blog.id%}">글 수정하기</a>
+    <a href="{% url 'delete' blog.id%}">글 삭제하기</a>
+{% endblock %}
